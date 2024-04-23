@@ -28,6 +28,12 @@ export async function createSession(formData: any) {
 }
 
 async function getQrCode(id: any, fullUrl: any) {
+  await fs.mkdir("public/qr_codes", (err) => {
+    if (err) {
+      return console.error(err);
+    }
+    console.log("Directory created successfully!");
+  });
   const attachUrl = `${fullUrl}review/${id}`;
   const qrDataUrl = await QRCode.toDataURL(attachUrl);
   var base64Data = qrDataUrl.replace(/^data:image\/png;base64,/, "");
