@@ -37,7 +37,7 @@ async function getQrCode(id: any, fullUrl: any) {
   const attachUrl = `${fullUrl}review/${id}`;
   const qrDataUrl = await QRCode.toDataURL(attachUrl);
   var base64Data = qrDataUrl.replace(/^data:image\/png;base64,/, "");
-  fs.promises.writeFile(`public/qr_codes/${id}.png`, base64Data, "base64");
+  fs.promises.writeFile(`qr_codes/${id}.png`, base64Data, "base64");
   // QRCode.toDataURL('https://google.com', function (err: any, url: any) {
   //   console.log(url)
   // })
