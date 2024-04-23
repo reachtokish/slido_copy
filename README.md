@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## What we are building?
 
-## Getting Started
+A tool through which user can give review of various events by scaning QR code
 
-First, run the development server:
+## End user journey
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. User will get QR code in another screen
+2. User can scan that from phone
+3. User will get a link to open it in browser
+4. User has to enter name and a unique id to identify later
+5. User will see a form to review
+   5.1. Star review
+   5.2. Textbox to write something
+   5.3. Submit button
+6. User can fillup and submit
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Admin journey
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. There can be multiple company who can register
+2. One company can have multiple admins
+3. Admin can login
+4. Admin will see events list in admin screen
+5. Events are something like onboarding or conference day
+6. Each events can have multiple sessions
+7. Sessions are like hr onboarding session or each talks in a conference
+8. Under each session admin can see who all have given review
